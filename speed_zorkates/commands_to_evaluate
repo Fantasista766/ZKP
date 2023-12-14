@@ -1,0 +1,5 @@
+./evaluate.sh setup.sh
+
+./evaluate.sh proof.sh
+
+./evaluate.sh verify.sh
