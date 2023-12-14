@@ -1,7 +1,7 @@
 Метод оценки производительности zokrates (circom)
 
 1. cd speed_zokrates (cd speed_circom)
-2. В tree.zok на строке 34 установить глубину дерева (в tree.circom строа 38)
+2. В tree.zok на строке 34 установить глубину дерева (в tree.circom строка 38)
 3. Изменить input.json так, чтобы длина path (proofHashes) бала равна глубине дерева
 4. Скомпилировать схему командой zokrates compile -i tree.zok --curve bn128 (circom tree.circom --r1cs --wasm)
 5. В файле commands_to_evaluate содержатся соответствующие команды для оценки времени сетапа, генерации доказательства и проверки доказательства. Их нужно последовательно выполнить в терминале.
