@@ -1,17 +1,8 @@
-How to evaluate zokrates?
+Метод оценки производительности zokrates (circom)
 
-1. cd speed_zokrates
-2. tree.zok line 34 choose tree depth
-3. change input.json accordingly (len(path) == tree depth)
-4. zokrates compile -i tree.zok --curve bn128
-5. file commands_to_evaluate contains necessary commands for setup, generate proof and verify, just copy them to terminal one by one
-6. repeat steps 2-5 for different tree depths
-
-How to evaluate circom?
-
-1. cd speed_circom
-2. tree.circom line 38 choose tree depth
-3. change input.json accordingly (len(proofHashes) == tree depth)
-4. circom tree.circom --r1cs --wasm
-5. file commands_to_evaluate contains necessary commands for setup, generate proof and verify, just copy them to terminal one by one
-6. repeat steps 2-5 for different tree depths
+1. cd speed_zokrates (cd speed_circom)
+2. В tree.zok на строке 34 установить глубину дерева (в tree.circom строа 38)
+3. Изменить input.json так, чтобы длина path (proofHashes) бала равна глубине дерева
+4. Скомпилировать схему командой zokrates compile -i tree.zok --curve bn128 (circom tree.circom --r1cs --wasm)
+5. В файле commands_to_evaluate содержатся соответствующие команды для оценки времени сетапа, генерации доказательства и проверки доказательства. Их нужно последовательно выполнить в терминале.
+6. Повторить шаги 2-5 для различных значений глубины дерева.
